@@ -29,6 +29,10 @@
             android:name=".LoginActivity"
             android:screenOrientation="portrait"/>
 
+        <activity
+            android:name=".DialerActivity"
+            android:screenOrientation="portrait"/>
+
         <service android:name=".VoiProService"/>
     </application>
 

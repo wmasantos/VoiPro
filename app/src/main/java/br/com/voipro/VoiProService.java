@@ -38,12 +38,17 @@ import br.com.voipro.entity.UserEntity;
 
 public class VoiProService extends Service implements LinphoneCoreListener{
     private LinphoneCore linphoneCore;
+    private static LinphoneCore staticLinphoneCore;
     private LinphoneCoreFactory linphoneCoreFactory;
     private LinphoneAuthInfo linphoneAuthInfo;
     private LinphoneProxyConfig linphoneProxyConfig;
     private LinphoneAddress linphoneAddress;
     private LinphoneCall linphoneCall;
     private boolean iterate;
+
+    public static LinphoneCore instance(){
+        return staticLinphoneCore;
+    }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -84,6 +89,7 @@ public class VoiProService extends Service implements LinphoneCoreListener{
         linphoneCore.addAuthInfo(linphoneAuthInfo);
         linphoneCore.addProxyConfig(linphoneProxyConfig);
         linphoneCore.setDefaultProxyConfig(linphoneProxyConfig);
+        staticLinphoneCore = linphoneCore;
 
         while(iterate){
             linphoneCore.iterate();
@@ -242,28 +248,7 @@ public class VoiProService extends Service implements LinphoneCoreListener{
 
     @Override
     public void callState(LinphoneCore linphoneCore, LinphoneCall linphoneCall, LinphoneCall.State state, String s) {
-        switch(state.value()){
-            case 1: {
-                try {
-                    linphoneCore.acceptCall(linphoneCall);
-                } catch (LinphoneCoreException e) {
-                    e.printStackTrace();
-                }
-                break;
-            }
-            case 6:{
-                LinphoneCallParams linphoneCallParams = linphoneCall.getCurrentParams();
-                linphoneCallParams.setRecordFile(Environment.getExternalStorageDirectory().getAbsolutePath() + "/Teste/xkkk.mp3");
-                linphoneCall.startRecording();
-                System.out.println(state.value());
-
-                break;
-            }
-            case 13: {
-                linphoneCall.stopRecording();
-                break;
-            }
-        }
+        updateCallState(linphoneCore, linphoneCall, state, s);
     }
 
     @Override
@@ -309,5 +294,30 @@ public class VoiProService extends Service implements LinphoneCoreListener{
     @Override
     public void networkReachableChanged(LinphoneCore linphoneCore, boolean b) {
 
+    }
+
+    private void updateCallState(LinphoneCore linphoneCore, LinphoneCall linphoneCall, LinphoneCall.State state, String s){
+        switch(state.value()){
+            case 1: {
+                try {
+                    linphoneCore.acceptCall(linphoneCall);
+                } catch (LinphoneCoreException e) {
+                    e.printStackTrace();
+                }
+                break;
+            }
+            case 6:{
+                LinphoneCallParams linphoneCallParams = linphoneCall.getCurrentParams();
+                linphoneCallParams.setRecordFile(Environment.getExternalStorageDirectory().getAbsolutePath() + "/Teste/xkkk.mp3");
+                linphoneCall.startRecording();
+                System.out.println(state.value());
+
+                break;
+            }
+            case 13: {
+                linphoneCall.stopRecording();
+                break;
+            }
+        }
     }
 }
