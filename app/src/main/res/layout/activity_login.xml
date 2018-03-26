@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/etLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_edittex"
+        android:padding="5dp"
+        android:hint="Login/Ramal"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="1001"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_edittex"
+        android:padding="5dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="1234"/>
+
+    <EditText
+        android:id="@+id/etHost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_edittex"
+        android:padding="5dp"
+        android:hint="Host/Server"
+        android:layout_marginBottom="30dp"
+        android:gravity="center"
+        android:text="192.168.10.130"/>
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="LOGIN"
+        android:background="@drawable/selector_btn_primary"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

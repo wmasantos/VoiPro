@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status do servidor"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btStartStop"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Start"
+        android:background="@drawable/selector_start"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>
