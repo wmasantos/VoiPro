@@ -5,15 +5,36 @@
     android:layout_height="match_parent"
     android:background="@drawable/shape_dialer_background">
 
-    <TextView
-        android:id="@+id/tvDialerDisplay"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:id="@+id/tvDialerDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="@drawable/shape_edittex"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_backspace"
+            android:layout_marginLeft="15dp"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,41 +43,121 @@
             android:gravity="center"
             android:layout_marginBottom="20dp">
 
-            <TextView
-                android:clickable="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:background="@drawable/selector_dialer_buttom"
-                android:text="1"
-                android:layout_marginRight="20dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
 
-            <TextView
-                android:clickable="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:background="@drawable/selector_dialer_buttom"
-                android:text="2"
-                android:layout_marginRight="20dp"/>
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:background="@drawable/selector_dialer_buttom"
+                    android:text="1"/>
+            </LinearLayout>
 
-            <TextView
-                android:clickable="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:background="@drawable/selector_dialer_buttom"
-                android:text="3"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
 
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:background="@drawable/selector_dialer_buttom"
+                    android:text="2"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:background="@drawable/selector_dialer_buttom"
+                    android:text="3"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:background="@drawable/selector_dialer_buttom"
+                    android:text="4"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:background="@drawable/selector_dialer_buttom"
+                    android:text="5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:background="@drawable/selector_dialer_buttom"
+                    android:text="6"/>
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -67,42 +168,59 @@
             android:gravity="center"
             android:layout_marginBottom="20dp">
 
-            <TextView
-                android:clickable="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:background="@drawable/selector_dialer_buttom"
-                android:text="4"
-                android:layout_marginRight="20dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
 
-            <TextView
-                android:clickable="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:background="@drawable/selector_dialer_buttom"
-                android:text="5"
-                android:layout_marginRight="20dp"/>
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:background="@drawable/selector_dialer_buttom"
+                    android:text="7"/>
+            </LinearLayout>
 
-            <TextView
-                android:clickable="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:background="@drawable/selector_dialer_buttom"
-                android:text="6"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
 
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:background="@drawable/selector_dialer_buttom"
+                    android:text="8"/>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:background="@drawable/selector_dialer_buttom"
+                    android:text="9"/>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -112,87 +230,59 @@
             android:gravity="center"
             android:layout_marginBottom="20dp">
 
-            <TextView
-                android:clickable="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:background="@drawable/selector_dialer_buttom"
-                android:text="7"
-                android:layout_marginRight="20dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
 
-            <TextView
-                android:clickable="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:background="@drawable/selector_dialer_buttom"
-                android:text="8"
-                android:layout_marginRight="20dp"/>
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:background="@drawable/selector_dialer_buttom"
+                    android:text="*"/>
+            </LinearLayout>
 
-            <TextView
-                android:clickable="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:background="@drawable/selector_dialer_buttom"
-                android:text="9"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
 
+                <ImageView
+                    android:clickable="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_call"
+                    android:padding="17dp"
+                    android:background="@drawable/selector_dialer_call"/>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:clickable="true"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:background="@drawable/selector_dialer_buttom"
+                    android:text="#"/>
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="20dp">
 
-            <TextView
-                android:clickable="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:background="@drawable/selector_dialer_buttom"
-                android:text="*"
-                android:layout_marginRight="20dp"/>
-
-            <TextView
-                android:clickable="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:background="@drawable/selector_dialer_buttom"
-                android:text="0"
-                android:layout_marginRight="20dp"/>
-
-            <TextView
-                android:clickable="true"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:background="@drawable/selector_dialer_buttom"
-                android:text="#"/>
-
-
-        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
